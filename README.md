@@ -272,4 +272,4 @@ while True:
         break
 ```
 
-And that's it really. The simulation does all the work according to the XML. This script merely loads the model from the xml, instantiates the simulation, sets some simulation parameters, then runs a loop for **sim_horizon** timesteps. 
+And that's it really. The simulation does all the work according to the XML. This script merely loads the model from the xml, instantiates the simulation (**MjSim**) and the visualizer (**MjViewer**), sets some simulation parameters, then runs a loop for **sim_horizon** timesteps. 

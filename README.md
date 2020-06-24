@@ -214,4 +214,4 @@ The most important parts of the model XML are the **worldbody**, **actuator**, a
 
 describes each of the constiuent "parts" of the model. 
 
-![](tosser-world-body.png)
+![](tosser-world-bodies.PNG)

@@ -271,3 +271,5 @@ while True:
     if os.getenv('TESTING') is not None:
         break
 ```
+
+And that's it really. The simulation does all the work according to the XML. This script merely loads the model from the xml, instantiates the simulation, sets some simulation parameters, then runs a loop for **sim_horizon** timesteps. 

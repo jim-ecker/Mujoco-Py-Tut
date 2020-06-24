@@ -215,3 +215,5 @@ The most important parts of the model XML are the **worldbody**, **actuator**, a
 describes each of the constiuent "parts" of the model. 
 
 ![](tosser-world-bodies.PNG)
+
+There's a lot going on here. The [World Bodies section](http://www.mujoco.org/book/XMLreference.html#body) of the [XML reference](http://www.mujoco.org/book/XMLreference.html) describes each of the attributes in this section. I've labeled the screenshot above with each of the **body**(ies) in the scene. 

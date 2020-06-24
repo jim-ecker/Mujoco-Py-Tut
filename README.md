@@ -224,6 +224,6 @@ There's a lot going on here. The [World Bodies section](http://www.mujoco.org/bo
 
 Now, I know I said these are the most important parts of the model and I've barely explained the parts in them. It's my hope that, as you've read through this section you've been cross referencing my explainations to the [XML reference](http://www.mujoco.org/book/XMLreference.html) and have ~~busted me on my flagrant plagiarism~~ seen where I got much of the information. If not
 
-
+![](doit.gif)
 
 

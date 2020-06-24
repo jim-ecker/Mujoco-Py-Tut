@@ -216,4 +216,8 @@ describes each of the constiuent "parts" of the model.
 
 ![](tosser-world-bodies.PNG)
 
-There's a lot going on here. The [World Bodies section](http://www.mujoco.org/book/XMLreference.html#body) of the [XML reference](http://www.mujoco.org/book/XMLreference.html) describes each of the attributes in this section. I've labeled the screenshot above with each of the **body**(ies) in the scene. 
+There's a lot going on here. The [World Bodies section](http://www.mujoco.org/book/XMLreference.html#body) of the [XML reference](http://www.mujoco.org/book/XMLreference.html) describes each of the attributes in this section. I've labeled the screenshot above with each of the **body**(ies) in the scene. A **VERY IMPORTANT NOTE**
+
+#### AN OBJECT REQUIRES A **JOINT** TO BE SPECIFIED ON IT IN ORDER FOR THE OBJECT TO MOVE
+
+**acuator**s move the object. **sensors** measure certain aspects of the model.

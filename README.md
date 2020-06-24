@@ -226,4 +226,48 @@ Now, I know I said these are the most important parts of the model and I've bare
 
 ![](doit.gif)
 
+## Mujoco-Py Python Files
 
+I've taken the liberty of commenting the code for the [tosser.py](https://github.com/openai/mujoco-py/blob/master/examples/tosser.py) file in the [Examples section](https://github.com/openai/mujoco-py/tree/master/examples) in Mujoco-py. You should be very versed with the Mujoco documentation by now, and The [Mujoco-py documentation](https://openai.github.io/mujoco-py/build/html/reference.html#) is the main reference to refer to for these python files. It closely follows the main Mujoco documentation and is just a Python wrapper around Mujoco's C++ implementation, with lower level functions exposed by a Cython api.
+
+```python
+#!/usr/bin/env python3
+"""
+Shows how to toss a capsule to a container.
+"""
+from mujoco_py import load_model_from_path, MjSim, MjViewer
+import os
+
+#Load the model and environment from its xml file
+model = load_model_from_path("../xmls/tosser.xml")
+sim = MjSim(model)
+
+#the time for each episode of the simulation
+sim_horizon = 1000
+
+#initialize the simulation visualization
+viewer = MjViewer(sim)
+
+#get initial state of simulation
+sim_state = sim.get_state()
+
+#repeat indefinitely
+while True:
+    #set simulation to initial state
+    sim.set_state(sim_state)
+
+    #for the entire simulation horizon
+    for i in range(sim_horizon):
+
+        #trigger the lever within the 0 to 150 time period
+        if i < 150:
+            sim.data.ctrl[:] = 0.0
+        else:
+            sim.data.ctrl[:] = -1.0
+        #move one time step forward in simulation
+        sim.step()
+        viewer.render()
+
+    if os.getenv('TESTING') is not None:
+        break
+```
